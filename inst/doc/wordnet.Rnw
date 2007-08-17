@@ -1,0 +1,119 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\newcommand{\strong}[1]{{\normalfont\fontseries{b}\selectfont #1}}
+\newcommand{\code}[1]{\mbox{\texttt{#1}}}
+\newcommand{\pkg}[1]{\strong{#1}}
+\newcommand{\proglang}[1]{\textsf{#1}}
+\newcommand{\acronym}[1]{\textsc{#1}}
+
+%% \VignetteIndexEntry{Introduction to the wordnet Package}
+
+\begin{document}
+<<echo=FALSE>>=
+options(width = 75)
+@
+\title{Introduction to the \pkg{wordnet} Package}
+\author{Ingo Feinerer}
+\maketitle
+\sloppy
+
+\begin{abstract}
+  The \pkg{wordnet} package provides a \proglang{R} interface to the
+  \proglang{WordNet} lexical database of English.
+\end{abstract}
+
+\section*{Introduction}
+The \pkg{wordnet} package provides a \proglang{R} via \proglang{Java}
+interface to the
+\proglang{WordNet}\footnote{\url{http://wordnet.princeton.edu/}}
+lexical database of English which is commonly used in linguistics and
+text mining. Internally \pkg{wordnet} uses
+\proglang{Jawbone}\footnote{\url{http://mfwallace.googlepages.com/jawbone.html}},
+a \proglang{Java} \acronym{Api} to \proglang{WordNet}, to access the
+database. Thus, this package needs both a working \proglang{Java}
+installation, activated \proglang{Java} under \proglang{R} support, and a
+working \proglang{WordNet} installation.
+
+Since we simulate the behavior of \proglang{Jawbone}, its homepage
+is a valuable source of information for background information and
+details besides this vignette.
+
+\section*{Loading the Package}
+The package is loaded via
+<<>>=
+library("wordnet")
+@
+
+\section*{Dictionary}
+A so-called \emph{dictionary} is the main structure for accessing the
+\proglang{WordNet} database. Before accessing the database the
+dictionary must be initialized with the path to the directory where
+the \proglang{WordNet} database has been installed (e.g.,
+\code{/usr/local/WordNet-3.0/dict}). The function \code{initDict()}
+searches environment variables (\code{WNHOME}) and default
+installation locations such that the argument can be neglected in most
+cases. It returns whether it found a valid installation and is ready
+to access the database.
+<<>>=
+validInstallation <- initDict()
+if (!validInstallation)
+    stop("could not find WordNet installation")
+@
+
+After initialization we instantiate a dictionary object
+<<>>=
+dict <- getDictInstance()
+@
+which we will use as our access point to the database.
+
+\section*{Filters}
+The package provides a set of filters in order to search for terms
+according to certain criteria. Available filter types can be listed via
+<<>>=
+getFilterTypes()
+@
+A detailed description of available
+filters gives the \proglang{Jawbone} homepage. E.g., we want to search
+for words in the database which start with \code{car}. So we create
+the desired filter with \code{getTermFilter()}, and access the first
+five terms which are nouns via \code{getIndexTerms()}. So-called \emph{index
+term}s hold information on the word itself and related meanings (i.e.,
+so-called \emph{synset}s). The function \code{getLemma()} extracts the
+word (so-called \emph{lemma} in \proglang{Jawbone} terminology).
+<<>>=
+filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+terms <- getIndexTerms(dict, "NOUN", 5, filter)
+sapply(terms, getLemma)
+@
+
+\section*{Synonyms}
+A very common usage is to find synonyms for a given term. Therefore,
+we provide the low-level function \code{getSynonyms()}. In this example
+we ask the database for the synonyms of the term \code{company}.
+<<>>=
+filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
+terms <- getIndexTerms(dict, "NOUN", 1, filter)
+getSynonyms(terms[[1]])
+@
+In addition there is the high-level function \code{synonyms()}
+omitting special parameter settings.
+<<>>=
+synonyms(dict, "company")
+@
+
+\section*{Related Synsets}
+Besides synonyms, synsets can provide information to related terms and
+synsets. Following code example finds the antonyms (i.e., opposite
+meaning) for the adjective \code{hot} in the database.
+<<>>=
+filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+terms <- getIndexTerms(dict, "ADJECTIVE", 1, filter)
+synsets <- getSynsets(terms[[1]])
+related <- getRelatedSynsets(synsets[[1]], "!")
+sapply(related, getWord)
+@
+
+\end{document}

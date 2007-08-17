@@ -1,0 +1,11 @@
+export("initDict",
+       "getDictInstance",
+       "getIndexTerms",
+       "getFilterTypes",
+       "getTermFilter",
+       "getLemma",
+       "getRelatedSynsets",
+       "getSynsets",
+       "getSynonyms",
+       "getWord",
+       "synonyms")
