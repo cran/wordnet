@@ -1,0 +1,34 @@
+\name{getWord}
+\alias{getWord}
+\title{Get synset word}
+\description{
+  Get the words in a synset.
+}
+\usage{
+getWord(synset)
+}
+\arguments{
+  \item{synset}{The synset whose words are returned.}
+}
+\value{
+  A character vector holding the words.
+}
+\references{
+  M. Wallace (2007).
+  Jawbone Java WordNet API.
+  \url{http://mfwallace.googlepages.com/jawbone.html}
+}
+\author{Ingo Feinerer}
+\seealso{\code{\link{getSynsets}}}
+\examples{
+validInstallation <- initDict()
+if (validInstallation) {
+    dict <- getDictInstance()
+    filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+    terms <- getIndexTerms(dict, "ADJECTIVE", 5, filter)
+    synsets <- getSynsets(terms[[1]])
+    related <- getRelatedSynsets(synsets[[1]], "!")
+    sapply(related, getWord)
+}
+}
+\keyword{file}
