@@ -5,10 +5,9 @@
 Get synonyms for a given word.
 }
 \usage{
-synonyms(dict, word)
+synonyms(word)
 }
 \arguments{
-  \item{dict}{A WordNet dictionary.}
   \item{word}{The input word.}
 }
 \value{
@@ -17,9 +16,6 @@ synonyms(dict, word)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynonyms}}}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    synonyms(dict, "company")
-}}
+synonyms("company")
+}
 \keyword{file}

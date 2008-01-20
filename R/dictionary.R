@@ -40,8 +40,22 @@ getDictInstance <- function() {
     .jnew("com.nexagis.jawbone.Dictionary")
 }
 
-getIndexTerms <- function(dict, pos, maxLimit, filter) {
-    iterator <- .jcall(dict,
+setDict <- function(pathData) {
+    if (initDict(pathData))
+        wordnet:::dict(getDictInstance())
+    else
+        stop("could not find WordNet installation")
+}
+
+getDict <- function() {
+    if (!is.null(wordnet:::dict()))
+        wordnet:::dict()
+    else
+        stop("could not find Wordnet dictionary")
+}
+
+getIndexTerms <- function(pos, maxLimit, filter) {
+    iterator <- .jcall(getDict(),
                        "Ljava/util/Iterator;",
                        "getIndexTermIterator",
                        .jfield("com.nexagis.jawbone.PartOfSpeech", "Lcom/nexagis/jawbone/PartOfSpeech;", pos),

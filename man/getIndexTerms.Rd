@@ -5,10 +5,9 @@
   Get index terms from a WordNet dictionary as specified by a filter.
 }
 \usage{
-getIndexTerms(dict, pos, maxLimit, filter)
+getIndexTerms(pos, maxLimit, filter)
 }
 \arguments{
-  \item{dict}{A WordNet dictionary.}
   \item{pos}{Part of speech type. Must be either \code{ADJECTIVE},
     \code{ADVERB}, \code{NOUN}, or \code{VERB}.}
   \item{maxLimit}{Maximum number of results.}
@@ -24,12 +23,8 @@ getIndexTerms(dict, pos, maxLimit, filter)
   \url{http://mfwallace.googlepages.com/jawbone.html}
 }
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    filter <- getTermFilter("StartsWithFilter", "car", TRUE)
-    getIndexTerms(dict, "NOUN", 5, filter)
-}
+filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+getIndexTerms("NOUN", 5, filter)
 }
 \author{Ingo Feinerer}
 \keyword{file}

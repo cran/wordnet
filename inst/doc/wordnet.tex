@@ -11,10 +11,8 @@
 
 %% \VignetteIndexEntry{Introduction to the wordnet Package}
 
+\usepackage{/usr/local/lib/R/share/texmf/Sweave}
 \begin{document}
-<<echo=FALSE>>=
-options(width = 75)
-@
 \title{Introduction to the \pkg{wordnet} Package}
 \author{Ingo Feinerer}
 \maketitle
@@ -43,9 +41,11 @@ details besides this vignette.
 
 \section*{Loading the Package}
 The package is loaded via
-<<>>=
-library("wordnet")
-@
+\begin{Schunk}
+\begin{Sinput}
+> library("wordnet")
+\end{Sinput}
+\end{Schunk}
 
 \section*{Dictionary}
 A so-called \emph{dictionary} is the main structure for accessing the
@@ -63,9 +63,16 @@ installation via \code{setDict()}.
 \section*{Filters}
 The package provides a set of filters in order to search for terms
 according to certain criteria. Available filter types can be listed via
-<<>>=
-getFilterTypes()
-@
+\begin{Schunk}
+\begin{Sinput}
+> getFilterTypes()
+\end{Sinput}
+\begin{Soutput}
+[1] "ContainsFilter"   "EndsWithFilter"   "ExactMatchFilter"
+[4] "RegexFilter"      "SoundFilter"      "StartsWithFilter"
+[7] "WildcardFilter"  
+\end{Soutput}
+\end{Schunk}
 A detailed description of available
 filters gives the \proglang{Jawbone} homepage. E.g., we want to search
 for words in the database which start with \code{car}. So we create
@@ -74,37 +81,60 @@ five terms which are nouns via \code{getIndexTerms()}. So-called \emph{index
 term}s hold information on the word itself and related meanings (i.e.,
 so-called \emph{synset}s). The function \code{getLemma()} extracts the
 word (so-called \emph{lemma} in \proglang{Jawbone} terminology).
-<<>>=
-filter <- getTermFilter("StartsWithFilter", "car", TRUE)
-terms <- getIndexTerms("NOUN", 5, filter)
-sapply(terms, getLemma)
-@
+\begin{Schunk}
+\begin{Sinput}
+> filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+> terms <- getIndexTerms("NOUN", 5, filter)
+> sapply(terms, getLemma)
+\end{Sinput}
+\begin{Soutput}
+[1] "car"          "car-ferry"    "car-mechanic" "car battery" 
+[5] "car bomb"    
+\end{Soutput}
+\end{Schunk}
 
 \section*{Synonyms}
 A very common usage is to find synonyms for a given term. Therefore,
 we provide the low-level function \code{getSynonyms()}. In this example
 we ask the database for the synonyms of the term \code{company}.
-<<>>=
-filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
-terms <- getIndexTerms("NOUN", 1, filter)
-getSynonyms(terms[[1]])
-@
+\begin{Schunk}
+\begin{Sinput}
+> filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
+> terms <- getIndexTerms("NOUN", 1, filter)
+> getSynonyms(terms[[1]])
+\end{Sinput}
+\begin{Soutput}
+[1] "caller"         "companionship"  "company"        "fellowship"    
+[5] "party"          "ship's company" "society"        "troupe"        
+\end{Soutput}
+\end{Schunk}
 In addition there is the high-level function \code{synonyms()}
 omitting special parameter settings.
-<<>>=
-synonyms("company")
-@
+\begin{Schunk}
+\begin{Sinput}
+> synonyms("company")
+\end{Sinput}
+\begin{Soutput}
+[1] "caller"         "companionship"  "company"        "fellowship"    
+[5] "party"          "ship's company" "society"        "troupe"        
+\end{Soutput}
+\end{Schunk}
 
 \section*{Related Synsets}
 Besides synonyms, synsets can provide information to related terms and
 synsets. Following code example finds the antonyms (i.e., opposite
 meaning) for the adjective \code{hot} in the database.
-<<>>=
-filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
-terms <- getIndexTerms("ADJECTIVE", 1, filter)
-synsets <- getSynsets(terms[[1]])
-related <- getRelatedSynsets(synsets[[1]], "!")
-sapply(related, getWord)
-@
+\begin{Schunk}
+\begin{Sinput}
+> filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+> terms <- getIndexTerms("ADJECTIVE", 1, filter)
+> synsets <- getSynsets(terms[[1]])
+> related <- getRelatedSynsets(synsets[[1]], "!")
+> sapply(related, getWord)
+\end{Sinput}
+\begin{Soutput}
+[1] "cold"
+\end{Soutput}
+\end{Schunk}
 
 \end{document}

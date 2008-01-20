@@ -24,14 +24,10 @@ getRelatedSynsets(synset, pointerSymbol)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
-    terms <- getIndexTerms(dict, "ADJECTIVE", 5, filter)
-    synsets <- getSynsets(terms[[1]])
-    related <- getRelatedSynsets(synsets[[1]], "!")
-    sapply(related, getWord)
-}
+filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+terms <- getIndexTerms("ADJECTIVE", 5, filter)
+synsets <- getSynsets(terms[[1]])
+related <- getRelatedSynsets(synsets[[1]], "!")
+sapply(related, getWord)
 }
 \keyword{file}
