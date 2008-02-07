@@ -17,8 +17,7 @@ getDictInstance()
   \url{http://mfwallace.googlepages.com/jawbone.html}
 }
 \examples{
-validInstallation <- initDict()
-if (validInstallation)
+if (initDict())
   getDictInstance()
 }
 \keyword{file}

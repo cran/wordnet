@@ -21,11 +21,8 @@ getSynsets(indexterm)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
-    terms <- getIndexTerms(dict, "ADJECTIVE", 5, filter)
-    getSynsets(terms[[1]])
-}}
+filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+terms <- getIndexTerms("ADJECTIVE", 5, filter)
+getSynsets(terms[[1]])
+}
 \keyword{file}

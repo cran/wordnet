@@ -26,10 +26,6 @@ getTermFilter(type, word, ignoreCase)
 }
 \author{Ingo Feinerer}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    getTermFilter("StartsWithFilter", "car", TRUE)
-}
+getTermFilter("StartsWithFilter", "car", TRUE)
 }
 \keyword{file}

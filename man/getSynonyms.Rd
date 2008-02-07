@@ -21,11 +21,8 @@ getSynonyms(indexterm)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
-    terms <- getIndexTerms(dict, "NOUN", 5, filter)
-    getSynonyms(terms[[1]])
-}}
+filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
+terms <- getIndexTerms("NOUN", 5, filter)
+getSynonyms(terms[[1]])
+}
 \keyword{file}

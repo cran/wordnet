@@ -21,12 +21,8 @@ getLemma(indexterm)
 }
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-validInstallation <- initDict()
-if (validInstallation) {
-    dict <- getDictInstance()
-    filter <- getTermFilter("StartsWithFilter", "car", TRUE)
-    terms <- getIndexTerms(dict, "NOUN", 5, filter)
-    sapply(terms, getLemma)
-}
+filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+terms <- getIndexTerms("NOUN", 5, filter)
+sapply(terms, getLemma)
 }
 \keyword{attribute}
