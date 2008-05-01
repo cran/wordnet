@@ -54,10 +54,10 @@ dictionary must be initialized with the path to the directory where
 the \proglang{WordNet} database has been installed (e.g.,
 \code{/usr/local/WordNet-3.0/dict}). On start up the package
 searches environment variables (\code{WNHOME}) and default
-installation locations such that the WordNet installation is found
+installation locations such that the \proglang{WordNet} installation is found
 automatically in most cases. On success the package stores internally
-a pointer to the WordNet dictionary which is used package wide by
-various functions. You can manually provide the path to the WordNet
+a pointer to the \proglang{WordNet} dictionary which is used package wide by
+various functions. You can manually provide the path to the \proglang{WordNet}
 installation via \code{setDict()}.
 
 \section*{Filters}
@@ -74,37 +74,52 @@ five terms which are nouns via \code{getIndexTerms()}. So-called \emph{index
 term}s hold information on the word itself and related meanings (i.e.,
 so-called \emph{synset}s). The function \code{getLemma()} extracts the
 word (so-called \emph{lemma} in \proglang{Jawbone} terminology).
-<<>>=
+<<eval=FALSE>>=
 filter <- getTermFilter("StartsWithFilter", "car", TRUE)
 terms <- getIndexTerms("NOUN", 5, filter)
 sapply(terms, getLemma)
 @
+\begin{Soutput}
+[1] "car"      "car-ferry"     "car-mechanic"     "car battery"
+[5] "car bomb"
+\end{Soutput}
 
 \section*{Synonyms}
 A very common usage is to find synonyms for a given term. Therefore,
 we provide the low-level function \code{getSynonyms()}. In this example
 we ask the database for the synonyms of the term \code{company}.
-<<>>=
+<<eval=FALSE>>=
 filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
 terms <- getIndexTerms("NOUN", 1, filter)
 getSynonyms(terms[[1]])
 @
+\begin{Soutput}
+[1] "caller"     "companionship"   "company"   "fellowship"
+[5] "party"      "ship's company"   "society"   "troupe"
+\end{Soutput}
 In addition there is the high-level function \code{synonyms()}
 omitting special parameter settings.
-<<>>=
+<<eval=FALSE>>=
 synonyms("company")
 @
+\begin{Soutput}
+[1] "caller"     "companionship"   "company"   "fellowship"
+[5] "party"      "ship's company"   "society"   "troupe"
+\end{Soutput}
 
 \section*{Related Synsets}
 Besides synonyms, synsets can provide information to related terms and
 synsets. Following code example finds the antonyms (i.e., opposite
 meaning) for the adjective \code{hot} in the database.
-<<>>=
+<<eval=FALSE>>=
 filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
 terms <- getIndexTerms("ADJECTIVE", 1, filter)
 synsets <- getSynsets(terms[[1]])
 related <- getRelatedSynsets(synsets[[1]], "!")
 sapply(related, getWord)
 @
+\begin{Soutput}
+[1] "cold"
+\end{Soutput}
 
 \end{document}

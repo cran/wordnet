@@ -1,6 +1,6 @@
 \name{getFilterTypes}
 \alias{getFilterTypes}
-\title{Get available filter types}
+\title{Get Available Filter Types}
 \description{
   Get available filter types.
 }

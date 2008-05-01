@@ -16,5 +16,5 @@ dict <- local({
                        lib.loc = libname))
 
     if (initDict())
-        wordnet:::dict(getDictInstance())
+        dict(getDictInstance())
 }

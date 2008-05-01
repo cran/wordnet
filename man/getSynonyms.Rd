@@ -1,6 +1,6 @@
 \name{getSynonyms}
 \alias{getSynonyms}
-\title{Get synonyms for an index term}
+\title{Get Synonyms for an Index Term}
 \description{
 Get synonyms for a given index term.
 }
@@ -21,8 +21,10 @@ getSynonyms(indexterm)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
-terms <- getIndexTerms("NOUN", 5, filter)
-getSynonyms(terms[[1]])
+if (initDict()) {
+  filter <- getTermFilter("ExactMatchFilter", "company", TRUE)
+  terms <- getIndexTerms("NOUN", 5, filter)
+  getSynonyms(terms[[1]])
+}
 }
 \keyword{file}

@@ -1,6 +1,6 @@
 \name{getTermFilter}
 \alias{getTermFilter}
-\title{Get a term filter}
+\title{Get a Term Filter}
 \description{
   Get a term filter.
 }
@@ -26,6 +26,7 @@ getTermFilter(type, word, ignoreCase)
 }
 \author{Ingo Feinerer}
 \examples{
-getTermFilter("StartsWithFilter", "car", TRUE)
+if (initDict())
+  getTermFilter("StartsWithFilter", "car", TRUE)
 }
 \keyword{file}

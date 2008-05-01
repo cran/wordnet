@@ -1,6 +1,6 @@
 \name{getDictInstance}
 \alias{getDictInstance}
-\title{Get a dictionary instance}
+\title{Get a Dictionary Instance}
 \description{
   Returns an instance to a WordNet dictionary.
 }

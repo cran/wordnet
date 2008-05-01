@@ -31,6 +31,7 @@ getDict()
 }
 \author{Ingo Feinerer}
 \examples{
-getDict()
+if (initDict())
+  getDict()
 }
 \keyword{file}

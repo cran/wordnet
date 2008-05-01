@@ -1,6 +1,6 @@
 \name{getLemma}
 \alias{getLemma}
-\title{Get index term lemma}
+\title{Get Index Term Lemma}
 \description{
   Retrieve the lemma (i.e., word) of an index term.
 }
@@ -21,8 +21,10 @@ getLemma(indexterm)
 }
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-filter <- getTermFilter("StartsWithFilter", "car", TRUE)
-terms <- getIndexTerms("NOUN", 5, filter)
-sapply(terms, getLemma)
+if (initDict()) {
+  filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+  terms <- getIndexTerms("NOUN", 5, filter)
+  sapply(terms, getLemma)
+}
 }
 \keyword{attribute}

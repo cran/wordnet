@@ -1,6 +1,6 @@
 \name{getWord}
 \alias{getWord}
-\title{Get synset word}
+\title{Get Synset Word}
 \description{
   Get the words in a synset.
 }
@@ -21,10 +21,12 @@ getWord(synset)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}
 \examples{
-filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
-terms <- getIndexTerms("ADJECTIVE", 5, filter)
-synsets <- getSynsets(terms[[1]])
-related <- getRelatedSynsets(synsets[[1]], "!")
-sapply(related, getWord)
+if (initDict()) {
+  filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+  terms <- getIndexTerms("ADJECTIVE", 5, filter)
+  synsets <- getSynsets(terms[[1]])
+  related <- getRelatedSynsets(synsets[[1]], "!")
+  sapply(related, getWord)
+}
 }
 \keyword{file}

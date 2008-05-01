@@ -1,8 +1,8 @@
 \name{initDict}
 \alias{initDict}
-\title{Initialize dictionary}
+\title{Initialize Dictionary}
 \description{
-  Initializes the WordNet dictionary using the Jawbone Java API to WordNet.
+  Initializes the WordNet dictionary using the Jawbone Java \acronym{API} to WordNet.
 }
 \usage{
 initDict(pathData = "")
@@ -31,6 +31,6 @@ initDict(pathData = "")
 }
 \author{Ingo Feinerer}
 \examples{
-initDict("/usr/local/WordNet-3.0/dict")
+\dontrun{initDict("/usr/local/WordNet-3.0/dict")}
 }
 \keyword{file}

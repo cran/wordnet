@@ -32,6 +32,6 @@ setDict(pathData)
 }
 \author{Ingo Feinerer}
 \examples{
-setDict("/usr/local/WordNet-3.0/dict")
+\dontrun{setDict("/usr/local/WordNet-3.0/dict")}
 }
 \keyword{file}
