@@ -13,13 +13,13 @@ initDict <- function(pathData = "") {
     # Windows editions provide a registry key
 
     # Try UNIX Wordnet 3.0 default path
-     if (!validPath) {
+    if (!validPath) {
         pathData <- "/usr/local/WordNet-3.0/dict"
         .jcall("com.nexagis.jawbone.Dictionary", "V", "initialize", pathData)
         validPath <- .jcall("com.nexagis.jawbone.Dictionary", "Z", "pathIsValid")
-   }
+    }
 
-   # Try UNIX Wordnet 2.1 default path
+    # Try UNIX Wordnet 2.1 default path
     if (!validPath) {
         pathData <- "/usr/local/WordNet-2.1/dict"
         .jcall("com.nexagis.jawbone.Dictionary", "V", "initialize", pathData)
@@ -33,6 +33,9 @@ initDict <- function(pathData = "") {
         validPath <- .jcall("com.nexagis.jawbone.Dictionary", "Z", "pathIsValid")
     }
 
+    if (!validPath)
+        warning("cannot find WordNet 'dict' directory: please set the environment variable WNHOME to its parent")
+
     return(validPath)
 }
 
@@ -42,14 +45,14 @@ getDictInstance <- function() {
 
 setDict <- function(pathData) {
     if (initDict(pathData))
-        wordnet:::dict(getDictInstance())
+        dict(getDictInstance())
     else
         stop("could not find WordNet installation")
 }
 
 getDict <- function() {
-    if (!is.null(wordnet:::dict()))
-        wordnet:::dict()
+    if (!is.null(dict()))
+        dict()
     else
         stop("could not find Wordnet dictionary")
 }

@@ -1,6 +1,6 @@
 \name{getRelatedSynsets}
 \alias{getRelatedSynsets}
-\title{Get related synsets for a synset}
+\title{Get Related Synsets for a Synset}
 \description{
   Get related synsets for a given synset based on a pointer symbol.
 }
@@ -24,10 +24,12 @@ getRelatedSynsets(synset, pointerSymbol)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}
 \examples{
-filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
-terms <- getIndexTerms("ADJECTIVE", 5, filter)
-synsets <- getSynsets(terms[[1]])
-related <- getRelatedSynsets(synsets[[1]], "!")
-sapply(related, getWord)
+if (initDict()) {
+  filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
+  terms <- getIndexTerms("ADJECTIVE", 5, filter)
+  synsets <- getSynsets(terms[[1]])
+  related <- getRelatedSynsets(synsets[[1]], "!")
+  sapply(related, getWord)
+}
 }
 \keyword{file}

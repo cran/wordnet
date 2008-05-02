@@ -1,6 +1,6 @@
 \name{synonyms}
 \alias{synonyms}
-\title{Get synonyms for a word}
+\title{Get Synonyms for a Word}
 \description{
 Get synonyms for a given word.
 }
@@ -16,6 +16,7 @@ synonyms(word)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynonyms}}}
 \examples{
-synonyms("company")
+if (initDict())
+  synonyms("company")
 }
 \keyword{file}

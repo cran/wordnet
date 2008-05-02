@@ -1,6 +1,6 @@
 \name{getIndexTerms}
 \alias{getIndexTerms}
-\title{Get index terms}
+\title{Get Index Terms}
 \description{
   Get index terms from a WordNet dictionary as specified by a filter.
 }
@@ -23,8 +23,10 @@ getIndexTerms(pos, maxLimit, filter)
   \url{http://mfwallace.googlepages.com/jawbone.html}
 }
 \examples{
-filter <- getTermFilter("StartsWithFilter", "car", TRUE)
-getIndexTerms("NOUN", 5, filter)
+if (initDict()) {
+  filter <- getTermFilter("StartsWithFilter", "car", TRUE)
+  getIndexTerms("NOUN", 5, filter)
+}
 }
 \author{Ingo Feinerer}
 \keyword{file}
