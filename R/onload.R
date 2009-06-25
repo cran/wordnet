@@ -1,4 +1,5 @@
-dict <- local({
+dict <-
+local({
     d <- NULL
     function(new, ...) {
         if (!missing(new))
@@ -8,12 +9,10 @@ dict <- local({
     }
 })
 
-.onLoad <- function(libname, pkgname) {
-    require("rJava")
-    .jinit(system.file("java",
-                       "jawbone.jar",
-                       package = pkgname,
-                       lib.loc = libname))
+.onLoad <-
+function(libname, pkgname)
+{
+    .jpackage(pkgname, lib.loc = libname)
 
     if (initDict())
         dict(getDictInstance())
