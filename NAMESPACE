@@ -1,3 +1,5 @@
+import("rJava")
+
 export("initDict",
        "getDict",
        "getDictInstance",
