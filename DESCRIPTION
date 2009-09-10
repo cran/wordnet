@@ -1,7 +1,7 @@
 Package: wordnet
 Title: WordNet Interface
-Version: 0.1-4
-Date: 2009-06-25
+Version: 0.1-5
+Date: 2009-09-10
 Author: Ingo Feinerer, Kurt Hornik
 Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
 Imports: rJava (>= 0.6-3)
@@ -16,6 +16,6 @@ Description: An interface to WordNet using the Jawbone Java API to
         representing one underlying lexical concept. Different
         relations link the synonym sets.
 License: MIT
-Packaged: 2009-06-25 19:59:09 UTC; hornik
+Packaged: 2009-09-10 18:52:52 UTC; hornik
 Repository: CRAN
-Date/Publication: 2009-06-25 20:06:23
+Date/Publication: 2009-09-10 19:02:48
