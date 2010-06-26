@@ -53,6 +53,7 @@ function() {
 getIndexTerms <-
 function(pos, maxLimit, filter)
 {
+    pos <- .expand_synset_type(pos[1L])
     iterator <-
         .jcall(getDict(),
                "Ljava/util/Iterator;",
@@ -63,4 +64,25 @@ function(pos, maxLimit, filter)
                as.integer(maxLimit),
                .jcast(filter, "com.nexagis.jawbone.filter.TermFilter"))
     .jevalIterator(iterator)
+}
+
+WN_synset_types <-
+    c("NOUN", "VERB", "ADJECTIVE", "ADJECTIVE_SATELLITE", "ADVERB")
+
+.expand_synset_type <-
+function(x)
+{
+    y <- charmatch(x, WN_synset_types)
+    if(is.na(y))
+        stop(sprintf("Unknown synset type '%s'", x))
+    if(y == 0) {
+        if(nchar(x) < 3L)
+            stop(sprintf("Ambiguous synset type abbrev '%s'", x))
+        if(substring(x, 3L, 3L) == "J")
+            "ADJECTIVE"
+        else
+            "ADVERB"
+    } else {
+        WN_synset_types[y]
+    }
 }

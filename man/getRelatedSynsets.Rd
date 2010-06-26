@@ -24,7 +24,7 @@ getRelatedSynsets(synset, pointerSymbol)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}
 \examples{
-if (initDict()) {
+if(initDict()) {
   filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
   terms <- getIndexTerms("ADJECTIVE", 5, filter)
   synsets <- getSynsets(terms[[1]])

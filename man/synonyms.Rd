@@ -16,7 +16,7 @@ synonyms(word)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynonyms}}}
 \examples{
-if (initDict())
+if(initDict())
   synonyms("company")
 }
 \keyword{file}
