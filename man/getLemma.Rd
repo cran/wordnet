@@ -21,7 +21,7 @@ getLemma(indexterm)
 }
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-if (initDict()) {
+if(initDict()) {
   filter <- getTermFilter("StartsWithFilter", "car", TRUE)
   terms <- getIndexTerms("NOUN", 5, filter)
   sapply(terms, getLemma)

@@ -8,22 +8,22 @@
 getIndexTerms(pos, maxLimit, filter)
 }
 \arguments{
-  \item{pos}{Part of speech type. Must be either \code{ADJECTIVE},
-    \code{ADVERB}, \code{NOUN}, or \code{VERB}.}
+  \item{pos}{Part of speech type.
+    Must be either \code{"ADJECTIVE"}, \code{"ADVERB"}, \code{"NOUN"},
+    or \code{"VERB"}.}
   \item{maxLimit}{Maximum number of results.}
-  \item{filter}{A term filter.}
+  \item{filter}{A term filter (see \code{\link{getTermFilter}}).}
 }
 \value{
   A list of index terms.
 }
-\seealso{\code{\link{getTermFilter}}}
 \references{
   M. Wallace (2007).
   Jawbone Java WordNet API.
   \url{http://mfwallace.googlepages.com/jawbone.html}
 }
 \examples{
-if (initDict()) {
+if(initDict()) {
   filter <- getTermFilter("StartsWithFilter", "car", TRUE)
   getIndexTerms("NOUN", 5, filter)
 }

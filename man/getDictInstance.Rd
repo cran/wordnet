@@ -17,7 +17,7 @@ getDictInstance()
   \url{http://mfwallace.googlepages.com/jawbone.html}
 }
 \examples{
-if (initDict())
+if(initDict())
   getDictInstance()
 }
 \keyword{file}

@@ -8,10 +8,13 @@
 getTermFilter(type, word, ignoreCase)
 }
 \arguments{
-  \item{type}{Filter type. Available filters are \code{ContainsFilter},
-    \code{EndsWithFilter}, \code{ExactMatchFilter}, \code{RegexFilter},
-    \code{SoundFilter}, \code{StartsWithFilter}, and
-    \code{WildcardFilter}.}
+  \item{type}{Filter type.
+    Available filters are \code{"ContainsFilter"},
+    \code{"EndsWithFilter"}, \code{"ExactMatchFilter"},
+    \code{"RegexFilter"}, \code{"SoundFilter"},
+    \code{"StartsWithFilter"}, and \code{"WildcardFilter"}.
+    Can also be a unique abbreviation of an available filter name.
+  }
   \item{word}{Term to be matched.}
   \item{ignoreCase}{Indicates whether lower and upper case are
     distinguished.}
@@ -26,7 +29,7 @@ getTermFilter(type, word, ignoreCase)
 }
 \author{Ingo Feinerer}
 \examples{
-if (initDict())
+if(initDict())
   getTermFilter("StartsWithFilter", "car", TRUE)
 }
 \keyword{file}

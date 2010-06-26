@@ -2,7 +2,8 @@
 \alias{initDict}
 \title{Initialize Dictionary}
 \description{
-  Initializes the WordNet dictionary using the Jawbone Java \acronym{API} to WordNet.
+  Initializes the WordNet dictionary using the Jawbone Java
+  \acronym{API} to WordNet.
 }
 \usage{
 initDict(pathData = "")
@@ -12,7 +13,7 @@ initDict(pathData = "")
 }
 \details{
   In case the user supplied path is invalid the function tries to find
-  the installation itself by investigating the \code{WNHOME} environment
+  the installation itself by investigating the \env{WNHOME} environment
   variable and by trying default installation locations.
 }
 \value{

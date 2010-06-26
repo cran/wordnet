@@ -3,8 +3,8 @@
 \title{Get Default Dictionary}
 \description{
   The package \pkg{wordnet} tries to locate a valid WordNet installation
-  on start up by investigating the \code{WNHOME} environment variable
-  and by trying default installation locations. On success it acquires a
+  on start up by investigating the \env{WNHOME} environment variable and
+  by trying default installation locations.  On success it acquires a 
   pointer to the actual WordNet dictionary and stores internally a
   reference to the dictionary instance. \code{getDict} returns this
   default reference.
@@ -31,7 +31,7 @@ getDict()
 }
 \author{Ingo Feinerer}
 \examples{
-if (initDict())
+if(initDict())
   getDict()
 }
 \keyword{file}

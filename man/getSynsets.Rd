@@ -11,7 +11,7 @@ getSynsets(indexterm)
   \item{indexterm}{The input index term.}
 }
 \value{
-  An array of synsets.
+  A list of synsets.
 }
 \references{
   M. Wallace (2007).
@@ -21,7 +21,7 @@ getSynsets(indexterm)
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}
 \examples{
-if (initDict()) {
+if(initDict()) {
   filter <- getTermFilter("ExactMatchFilter", "hot", TRUE)
   terms <- getIndexTerms("ADJECTIVE", 5, filter)
   getSynsets(terms[[1]])
