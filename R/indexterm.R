@@ -15,5 +15,5 @@ function(indexterm)
 {
     synsets <-
         .jcall(indexterm, "[Lcom/nexagis/jawbone/Synset;", "getSynsets")
-    sort(unique(as.character(sapply(synsets, getWord))))
+    sort(unique(unlist(lapply(synsets, getWord))))
 }
