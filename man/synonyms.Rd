@@ -5,10 +5,13 @@
 Get synonyms for a given word.
 }
 \usage{
-synonyms(word)
+synonyms(word, pos)
 }
 \arguments{
   \item{word}{The input word.}
+  \item{pos}{Part of speech type.
+    Must be either \code{"ADJECTIVE"}, \code{"ADVERB"}, \code{"NOUN"},
+    or \code{"VERB"}.}
 }
 \value{
   A character vector holding the synonyms for the given word.
@@ -17,6 +20,6 @@ synonyms(word)
 \seealso{\code{\link{getSynonyms}}}
 \examples{
 if(initDict())
-  synonyms("company")
+  synonyms("company", "NOUN")
 }
 \keyword{file}

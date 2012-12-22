@@ -1,8 +1,8 @@
 synonyms <-
-function(word)
+function(word, pos)
 {
     filter <- getTermFilter("ExactMatchFilter", word, TRUE)
-    terms <- getIndexTerms("NOUN", 1L, filter)
+    terms <- getIndexTerms(pos, 1L, filter)
     if (is.null(terms))
         character()
     else
