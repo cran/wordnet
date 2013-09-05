@@ -19,7 +19,7 @@ getRelatedSynsets(synset, pointerSymbol)
 \references{
   M. Wallace (2007).
   Jawbone Java WordNet API.
-  \url{http://mfwallace.googlepages.com/jawbone.html}
+  \url{http://mfwallace.googlepages.com/jawbone}
 }
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}
