@@ -23,8 +23,8 @@ setDict(pathData)
 \references{
   C. Fellbaum (1998).
   \emph{WordNet: An Electronic Lexical Database}.
-  Bradford Books.
-  \url{http://wordnet.princeton.edu/}
+  Cambridge, MA: MIT Press.
+  \url{http://mitpress.mit.edu/books/wordnet}
 
   M. Wallace (2007).
   Jawbone Java WordNet API.

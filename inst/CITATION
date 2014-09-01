@@ -28,7 +28,7 @@ citEntry(entry="Manual",
          title = "Jawbone Java WordNet API",
          author = personList(as.person("Mike Wallace")),
          year = "2007",
-         url = "http://mfwallace.googlepages.com/jawbone.html",
+         url = "http://mfwallace.googlepages.com/jawbone",
          textVersion = {
              paste("Mike Wallace (2007).",
                    "Jawbone Java WordNet API.",

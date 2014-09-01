@@ -1,26 +1,35 @@
 Package: wordnet
 Title: WordNet Interface
-Version: 0.1-9
+Version: 0.1-10
 Authors@R: c(person("Ingo", "Feinerer", role = "aut"),
              person("Kurt", "Hornik", role = c("aut", "cre"),
                     email = "Kurt.Hornik@R-project.org"),
              person("Mike", "Wallace", role = c("ctb", "cph"),
                     comment = "Jawbone Java WordNet API library"))
 Description: An interface to WordNet using the Jawbone Java API to WordNet.
-  WordNet is an on-line lexical reference system developed by the Cognitive
-  Science Laboratory at Princeton University. Its design is inspired by current
-  psycholinguistic theories of human lexical memory. English nouns, verbs,
-  adjectives and adverbs are organized into synonym sets, each representing one
-  underlying lexical concept. Different relations link the synonym sets.
+  WordNet (<http://wordnet.princeton.edu/>) is a large lexical database of
+  English.  Nouns, verbs, adjectives and adverbs are grouped into sets of
+  cognitive synonyms (synsets), each expressing a distinct concept.  Synsets
+  are interlinked by means of conceptual-semantic and lexical relations.
+  Please note that WordNet(R) is a registered tradename.  Princeton
+  University makes WordNet available to research and commercial users
+  free of charge provided the terms of their license
+  (<http://wordnet.princeton.edu/wordnet/license/>) are followed, and
+  proper reference is made to the project using an appropriate
+  citation (<http://wordnet.princeton.edu/wordnet/citing-wordnet/>).
 Imports: rJava (>= 0.6-3)
-SystemRequirements: Java (>= 5.0), WNdb-3.0.tar.gz from
-        wordnet.princeton.edu
+SystemRequirements: Java (>= 5.0); WordNet database files (direct
+        download:
+        <http://wordnetcode.princeton.edu/3.0/WNdb-3.0.tar.gz>; Debian
+        and Fedora package: wordnet)
 License: MIT + file LICENSE
-Packaged: 2013-09-05 16:37:46 UTC; hornik
+URL: http://wordnet.princeton.edu/,
+        https://sites.google.com/site/mfwallace/jawbone
+Packaged: 2015-01-25 09:50:13 UTC; hornik
 Author: Ingo Feinerer [aut],
   Kurt Hornik [aut, cre],
   Mike Wallace [ctb, cph] (Jawbone Java WordNet API library)
 Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-09-05 19:11:21
+Date/Publication: 2015-01-25 17:47:19
