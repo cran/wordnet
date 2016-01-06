@@ -4,48 +4,32 @@ citHeader("When using wordnet in publications, please cite both the wordnet inte
 if(!exists("meta") || is.null(meta)) meta <- packageDescription("wordnet")
 
 year <- sub("-.*", "", meta$Date)
-note <- sprintf("R package version %s.", meta$Version)
+note <- sprintf("R package version %s", meta$Version)
 
-citEntry(entry="Manual",
+bibentry("Manual",
          title = "wordnet: WordNet Interface",
-         author = personList(as.person("Ingo Feinerer"),
-                             person("Kurt", "Hornik",
-                                    email = "Kurt.Hornik@R-project.org")),
+         author =
+             c(person("Ingo", "Feinerer"),
+               person("Kurt", "Hornik",
+                      email = "Kurt.Hornik@R-project.org")),
          year = year,
          note = note,
-         url = "http://CRAN.R-project.org/package=wordnet",
-         textVersion = {
-             paste("Ingo Feinerer and Kurt Hornik",
-                   sprintf("(%s).", year),
-                   "wordnet: WordNet Interface.",
-                   note,
-                   "URL http://CRAN.R-project.org/package=wordnet.")
-         },
+         url = "https://CRAN.R-project.org/package=wordnet",
 	 header = "To cite wordnet, the R via Java interface to WordNet, please use:"
-)
+         )
 
-citEntry(entry="Manual",
+bibentry("Manual",
          title = "Jawbone Java WordNet API",
-         author = personList(as.person("Mike Wallace")),
+         author = person("Mike", "Wallace"),
          year = "2007",
          url = "http://mfwallace.googlepages.com/jawbone",
-         textVersion = {
-             paste("Mike Wallace (2007).",
-                   "Jawbone Java WordNet API.",
-                   "URL http://mfwallace.googlepages.com/jawbone.html.")
-         },
 	 header = "To cite Jawbone, the Java interface to WordNet, please use:"
-)
+         )
 
-citEntry(entry="Book",
+bibentry("Book",
          title = "WordNet: An Electronic Lexical Database",
-         author = personList(as.person("Christiane Fellbaum")),
+         author = person("Christiane", "Fellbaum"),
          year = "1998",
          publisher = "Bradford Books",
-         textVersion = {
-             paste("Christiane Fellbaum (1998).", 
-                   "WordNet: An Electronic Lexical Database.",
-                   "Bradford Books.")
-         },
 	 header = "To cite WordNet, please use:"
-)
+         )
