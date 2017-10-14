@@ -1,4 +1,4 @@
-bf6f78da0d33b268e689b1ee111766e7 *DESCRIPTION
+f109fb0add76464a17ebe130f205c922 *DESCRIPTION
 3d0dd3e0dc1180bb3864cfa4c14909b7 *LICENSE
 6dfc69fad7526136cc1fff14e6f0bd00 *NAMESPACE
 be5116e21ec505f18c8953596c5af148 *R/AAA.R
@@ -7,13 +7,13 @@ be5116e21ec505f18c8953596c5af148 *R/AAA.R
 eb4567c468a7e7057f5188cfcb131925 *R/onload.R
 940357872acb42d1bcba7522173bc7da *R/synonyms.R
 5e7d47e222ba71681c5e25f067d85483 *R/synsets.R
-34cbc30a0e0bf7b37a2cf98094b5bfa5 *R/termfilter.R
-8a19ee729e9fec92f433ad3016e652b1 *build/vignette.rds
-43df0e0d330dd88c74793d9aa9c181c1 *configure
+5cce411926e0b02b97b7fcfc46b2d55e *R/termfilter.R
+ef125bd6dd2e43474bd51d58463023e2 *build/vignette.rds
+c2b16e9f2943d82924429cae1cbcbaed *configure
 a0a7ce00e1d9926b6642c1a6b3eeedc2 *inst/CITATION
 3b49dc08b7c47596a4eec08659819ffb *inst/doc/wordnet.R
 0682ad25a2cf4e5534de4608151c19e2 *inst/doc/wordnet.Rnw
-9750f32cf58b6469945725d8a5787927 *inst/doc/wordnet.pdf
+bff6e3e08729853a9af133b52d50146b *inst/doc/wordnet.pdf
 b0cadb278d5e7c024e6e706534491711 *inst/java/jawbone.jar
 0ea6df7b3c66ce6e926f6e483f6b1634 *java/README
 30147e5b36969b63321848a928e11bfb *man/getDict.Rd

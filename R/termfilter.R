@@ -11,7 +11,7 @@ getTermFilter <-
 function(type, word, ignoreCase)
 {
     type <- .expand_filter_type(type[1L])
-    .jnew(paste("com.nexagis.jawbone.filter", type, sep = "."),
+    .jnew(paste0("com.nexagis.jawbone.filter.", type),
           word, ignoreCase)
 }
 
