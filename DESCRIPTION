@@ -1,6 +1,6 @@
 Package: wordnet
 Title: WordNet Interface
-Version: 0.1-13
+Version: 0.1-14
 Authors@R: c(person("Ingo", "Feinerer", role = "aut"),
              person("Kurt", "Hornik", role = c("aut", "cre"),
                     email = "Kurt.Hornik@R-project.org",
@@ -27,10 +27,10 @@ License: MIT + file LICENSE
 URL: http://wordnet.princeton.edu/,
         https://sites.google.com/site/mfwallace/jawbone
 NeedsCompilation: no
-Packaged: 2017-11-12 11:15:33 UTC; hornik
+Packaged: 2017-11-26 09:20:13 UTC; hornik
 Author: Ingo Feinerer [aut],
   Kurt Hornik [aut, cre] (<https://orcid.org/0000-0003-4198-9911>),
   Mike Wallace [ctb, cph] (Jawbone Java WordNet API library)
 Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
 Repository: CRAN
-Date/Publication: 2017-11-12 11:21:41 UTC
+Date/Publication: 2017-11-26 09:23:22 UTC

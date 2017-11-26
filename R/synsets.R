@@ -3,6 +3,7 @@ function(synset, pointerSymbol)
 {
     l <- .jcall(synset, "Ljava/util/List;", "getRelatedSynsets",
                 pointerSymbol)
+    if(is.null(l)) return(list())
     iterator <- .jcall(l, "Ljava/util/Iterator;", "iterator")
     i <- .jevalIterator(iterator)
     lapply(i, .jcast, "Lcom/nexagis/jawbone/Synset;")
