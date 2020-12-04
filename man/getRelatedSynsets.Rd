@@ -11,7 +11,7 @@ getRelatedSynsets(synset, pointerSymbol)
   \item{synset}{Basic synset.}
   \item{pointerSymbol}{A symbol indicating the type of the related
     synsets. An overview is available at
-    \url{http://wordnet.princeton.edu/man/wnsearch.3WN.html#sect4}.}
+    \url{https://wordnet.princeton.edu/documentation/wnsearch3wn}.}
 }
 \value{
   A list of synsets.
@@ -19,7 +19,7 @@ getRelatedSynsets(synset, pointerSymbol)
 \references{
   M. Wallace (2007).
   Jawbone Java WordNet API.
-  \url{http://mfwallace.googlepages.com/jawbone}
+  \url{https://sites.google.com/site/mfwallace/jawbone}
 }
 \author{Ingo Feinerer}
 \seealso{\code{\link{getSynsets}}}

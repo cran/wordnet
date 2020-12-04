@@ -28,10 +28,10 @@ options(width = 75)
 \section*{Introduction}
 The \pkg{wordnet} package provides a \proglang{R} via \proglang{Java}
 interface to the
-\proglang{WordNet}\footnote{\url{http://wordnet.princeton.edu/}}
+\proglang{WordNet}\footnote{\url{https://wordnet.princeton.edu/}}
 lexical database of English which is commonly used in linguistics and
 text mining. Internally \pkg{wordnet} uses
-\proglang{Jawbone}\footnote{\url{http://mfwallace.googlepages.com/jawbone}},
+\proglang{Jawbone}\footnote{\url{https://sites.google.com/site/mfwallace/jawbone}},
 a \proglang{Java} \acronym{Api} to \proglang{WordNet}, to access the
 database. Thus, this package needs both a working \proglang{Java}
 installation, activated \proglang{Java} under \proglang{R} support, and a

@@ -22,7 +22,7 @@ bibentry("Manual",
          title = "Jawbone Java WordNet API",
          author = person("Mike", "Wallace"),
          year = "2007",
-         url = "http://mfwallace.googlepages.com/jawbone",
+         url = "https://sites.google.com/site/mfwallace/jawbone",
 	 header = "To cite Jawbone, the Java interface to WordNet, please use:"
          )
 

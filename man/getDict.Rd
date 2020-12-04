@@ -23,11 +23,11 @@ getDict()
   C. Fellbaum (1998).
   \emph{WordNet: An Electronic Lexical Database}.
   Cambridge, MA: MIT Press.
-  \url{http://mitpress.mit.edu/books/wordnet}
+  \url{https://mitpress.mit.edu/books/wordnet}
 
   M. Wallace (2007).
   Jawbone Java WordNet API.
-  \url{http://mfwallace.googlepages.com/jawbone}
+  \url{https://sites.google.com/site/mfwallace/jawbone}
 }
 \author{Ingo Feinerer}
 \examples{

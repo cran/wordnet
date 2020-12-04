@@ -1,6 +1,6 @@
 Package: wordnet
 Title: WordNet Interface
-Version: 0.1-14
+Version: 0.1-15
 Authors@R: c(person("Ingo", "Feinerer", role = "aut"),
              person("Kurt", "Hornik", role = c("aut", "cre"),
                     email = "Kurt.Hornik@R-project.org",
@@ -8,29 +8,29 @@ Authors@R: c(person("Ingo", "Feinerer", role = "aut"),
              person("Mike", "Wallace", role = c("ctb", "cph"),
                     comment = "Jawbone Java WordNet API library"))
 Description: An interface to WordNet using the Jawbone Java API to WordNet.
-  WordNet (<http://wordnet.princeton.edu/>) is a large lexical database of
+  WordNet (<https://wordnet.princeton.edu/>) is a large lexical database of
   English.  Nouns, verbs, adjectives and adverbs are grouped into sets of
   cognitive synonyms (synsets), each expressing a distinct concept.  Synsets
   are interlinked by means of conceptual-semantic and lexical relations.
   Please note that WordNet(R) is a registered tradename.  Princeton
   University makes WordNet available to research and commercial users
   free of charge provided the terms of their license
-  (<http://wordnet.princeton.edu/wordnet/license/>) are followed, and
-  proper reference is made to the project using an appropriate
-  citation (<http://wordnet.princeton.edu/wordnet/citing-wordnet/>).
+  (<https://wordnet.princeton.edu/license-and-commercial-use>) are followed,
+  and proper reference is made to the project using an appropriate
+  citation (<https://wordnet.princeton.edu/citing-wordnet>).
 Imports: rJava (>= 0.6-3)
 SystemRequirements: Java (>= 5.0); WordNet database files (direct
         download:
-        <http://wordnetcode.princeton.edu/3.0/WNdb-3.0.tar.gz>; Debian
+        <https://wordnetcode.princeton.edu/3.0/WNdb-3.0.tar.gz>; Debian
         and Fedora package: wordnet)
 License: MIT + file LICENSE
-URL: http://wordnet.princeton.edu/,
+URL: https://wordnet.princeton.edu/,
         https://sites.google.com/site/mfwallace/jawbone
 NeedsCompilation: no
-Packaged: 2017-11-26 09:20:13 UTC; hornik
+Packaged: 2020-12-04 11:11:04 UTC; hornik
 Author: Ingo Feinerer [aut],
   Kurt Hornik [aut, cre] (<https://orcid.org/0000-0003-4198-9911>),
   Mike Wallace [ctb, cph] (Jawbone Java WordNet API library)
 Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
 Repository: CRAN
-Date/Publication: 2017-11-26 09:23:22 UTC
+Date/Publication: 2020-12-04 11:24:43 UTC

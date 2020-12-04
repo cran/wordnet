@@ -1,5 +1,4 @@
 ### R code from vignette source 'wordnet.Rnw'
-### Encoding: UTF-8
 
 ###################################################
 ### code chunk number 1: wordnet.Rnw:15-16
