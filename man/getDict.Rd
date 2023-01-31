@@ -23,7 +23,7 @@ getDict()
   C. Fellbaum (1998).
   \emph{WordNet: An Electronic Lexical Database}.
   Cambridge, MA: MIT Press.
-  \url{https://mitpress.mit.edu/books/wordnet}
+  \url{https://mitpress.mit.edu/9780262561167/}
 
   M. Wallace (2007).
   Jawbone Java WordNet API.

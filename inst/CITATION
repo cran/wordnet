@@ -1,22 +1,8 @@
 citHeader("When using wordnet in publications, please cite both the wordnet interface, the Jawbone interface, and WordNet itself:")
 
-## R >= 2.8.0 passes package metadata to citation().
-if(!exists("meta") || is.null(meta)) meta <- packageDescription("wordnet")
-
-year <- sub("-.*", "", meta$Date)
-note <- sprintf("R package version %s", meta$Version)
-
 bibentry("Manual",
-         title = "wordnet: WordNet Interface",
-         author =
-             c(person("Ingo", "Feinerer"),
-               person("Kurt", "Hornik",
-                      email = "Kurt.Hornik@R-project.org")),
-         year = year,
-         note = note,
-         url = "https://CRAN.R-project.org/package=wordnet",
-	 header = "To cite wordnet, the R via Java interface to WordNet, please use:"
-         )
+         other = unlist(citation(auto = meta), recursive = FALSE),
+	 header = "To cite wordnet, the R via Java interface to WordNet, please use:")
 
 bibentry("Manual",
          title = "Jawbone Java WordNet API",
@@ -31,5 +17,6 @@ bibentry("Book",
          author = person("Christiane", "Fellbaum"),
          year = "1998",
          publisher = "Bradford Books",
+         url = "https://mitpress.mit.edu/9780262561167/",
 	 header = "To cite WordNet, please use:"
          )

@@ -1,4 +1,4 @@
-6d605c8674f326b8a75329a25679fab7 *DESCRIPTION
+c8779cb579e3768364f6845196bc58ca *DESCRIPTION
 3d0dd3e0dc1180bb3864cfa4c14909b7 *LICENSE
 6dfc69fad7526136cc1fff14e6f0bd00 *NAMESPACE
 be5116e21ec505f18c8953596c5af148 *R/AAA.R
@@ -8,15 +8,15 @@ eb4567c468a7e7057f5188cfcb131925 *R/init.R
 940357872acb42d1bcba7522173bc7da *R/synonyms.R
 38c3f06b7ebb65399055dd53a9512fe5 *R/synsets.R
 5cce411926e0b02b97b7fcfc46b2d55e *R/termfilter.R
-2a45cae55a3dce569bf06bf722712870 *build/vignette.rds
+8be65ee71053858842ada6d770cbd8a6 *build/vignette.rds
 65210c87a5a834e96f65fe21fb6ae736 *configure
-c90a25976761ccd1e353a7c99549dbc6 *inst/CITATION
+5aaf9ae8f2a691bd74398ab57089c1c0 *inst/CITATION
 569ec518dc4f021d1e19c6f296b21f36 *inst/doc/wordnet.R
 3db03192ff4d8b838c5d1518b93025d8 *inst/doc/wordnet.Rnw
-7e89a575285bb285a9c2c8f9ec147d2e *inst/doc/wordnet.pdf
+bf54e07ab61dd888d8a9081012884022 *inst/doc/wordnet.pdf
 b0cadb278d5e7c024e6e706534491711 *inst/java/jawbone.jar
 0ea6df7b3c66ce6e926f6e483f6b1634 *java/README
-d4f133c6c6f78fa784e11c9026dee332 *man/getDict.Rd
+28c92f320397f5a0ed95560a0d4b6d30 *man/getDict.Rd
 51996e72663f70f064f5e649912e84cd *man/getDictInstance.Rd
 c3b0ab6b40ebcaa904d69b56a2d0887b *man/getFilterTypes.Rd
 5f787b78ca4c5c0b02ab374efbd407be *man/getIndexTerms.Rd
@@ -26,8 +26,8 @@ ad2689ef0e02d494e785289aa421e0fc *man/getSynonyms.Rd
 94d6c0250735045c519545e6f1d68a20 *man/getSynsets.Rd
 e7444d4fcfd0c6588d6160331737d612 *man/getTermFilter.Rd
 5444bb37289bd2f5191f39e2e54a9e8b *man/getWord.Rd
-6a5e76312c8e299e92e298db265b936f *man/initDict.Rd
-17cdbb355cb2ef713f70046258cc7934 *man/setDict.Rd
+bbc0f0436f71bc350e65488cc2089e0a *man/initDict.Rd
+404325c301f5ca6954ecee46ebc9c1fd *man/setDict.Rd
 860b664a7ac2c02942152f2d88ebfa27 *man/synonyms.Rd
 b2f00fd4d3162f7345ca6a14db8bd1df *tools/getsp.class
 d98d48a1d5c1bbec93a7a584509199e6 *tools/getsp.java
