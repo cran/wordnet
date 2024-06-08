@@ -8,6 +8,8 @@ function(pathData = "")
           ## Try WNHOME (UNIX) environment variable
           file.path(Sys.getenv("WNHOME"), "dict"),
           ## Windows editions provide a registry key
+          ## Try package wordnetDicts from datacube
+          system.file("dict", package = "wordnetDicts"),
           ## Try UNIX Wordnet 3.0 default path
           "/usr/local/WordNet-3.0/dict",
           ## Try UNIX Wordnet 2.1 default path
@@ -22,7 +24,7 @@ function(pathData = "")
     }
 
     if(!validPath)
-        warning("cannot find WordNet 'dict' directory: please set the environment variable WNHOME to its parent")
+        packageStartupMessage("cannot find WordNet 'dict' directory: please set the environment variable WNHOME to its parent")
 
     validPath
 }
