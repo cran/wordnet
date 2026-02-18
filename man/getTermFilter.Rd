@@ -23,9 +23,7 @@ getTermFilter(type, word, ignoreCase)
   A term filter.
 }
 \references{
-  M. Wallace (2007).
-  Jawbone Java WordNet API.
-  \url{https://sites.google.com/site/mfwallace/jawbone}
+  \bibshow{wordnet::Wallace:2007}
 }
 \author{Ingo Feinerer}
 \examples{

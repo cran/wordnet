@@ -18,9 +18,7 @@ getIndexTerms(pos, maxLimit, filter)
   A list of index terms.
 }
 \references{
-  M. Wallace (2007).
-  Jawbone Java WordNet API.
-  \url{https://sites.google.com/site/mfwallace/jawbone}
+  \bibshow{wordnet::Wallace:2007}
 }
 \examples{
 if(initDict()) {

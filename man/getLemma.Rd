@@ -15,9 +15,7 @@ getLemma(indexterm)
 }
 \author{Ingo Feinerer}
 \references{
-  M. Wallace (2007).
-  Jawbone Java WordNet API.
-  \url{https://sites.google.com/site/mfwallace/jawbone}
+  \bibshow{wordnet::Wallace:2007}
 }
 \seealso{\code{\link{getIndexTerms}}}
 \examples{

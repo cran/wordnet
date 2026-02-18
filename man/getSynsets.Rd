@@ -14,9 +14,7 @@ getSynsets(indexterm)
   A list of synsets.
 }
 \references{
-  M. Wallace (2007).
-  Jawbone Java WordNet API.
-  \url{https://sites.google.com/site/mfwallace/jawbone}
+  \bibshow{wordnet::Wallace:2007}
 }
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}

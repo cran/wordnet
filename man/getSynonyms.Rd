@@ -14,9 +14,7 @@ getSynonyms(indexterm)
   A character vector holding the synonyms for the given index term.
 }
 \references{
-  M. Wallace (2007).
-  Jawbone Java WordNet API.
-  \url{https://sites.google.com/site/mfwallace/jawbone}
+  \bibshow{wordnet::Wallace:2007}
 }
 \author{Ingo Feinerer}
 \seealso{\code{\link{getIndexTerms}}}
